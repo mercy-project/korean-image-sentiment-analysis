@@ -1,0 +1,4 @@
+pandas==0.24.2
+ipywidgets==7.5.0
+matplotlib==3.0.3
+opencv-python==4.1.0.25
