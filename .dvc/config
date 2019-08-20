@@ -1,4 +1,2 @@
 ['remote "gsremote"']
 url = gs://mercy-temp/cache
-[cache]
-gs = gsremote
