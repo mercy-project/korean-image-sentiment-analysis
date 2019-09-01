@@ -3,6 +3,9 @@
 import os
 os.environ['CUDA_VISIBLE_DEVICES']='0'
 
+
+from datetime import datetime
+
 import tensorflow as tf
 from tensorflow.keras.callbacks import CSVLogger, ModelCheckpoint, EarlyStopping
 from tensorflow.keras.callbacks import ReduceLROnPlateau
@@ -24,7 +27,11 @@ validation_split = .2
 verbose = 1
 num_classes = 7
 patience = 500
-base_path = '../trained_models/kor_multi_modal_emotion_model_frontal_face_20190811/'
+
+now = datetime.now()
+current = now.strftime('%Y%m%d%H%M%S')
+
+base_path = '../trained_models/kor_multi_modal_emotion_model_frontal_face'+current+'/'
 print("train model path ", base_path)
 # mirrored_strategy = tf.distribute.MirroredStrategy()
 # with mirrored_strategy.scope():
@@ -45,14 +52,12 @@ model.compile(optimizer='adam', loss='categorical_crossentropy',
               metrics=['accuracy'])
 model.summary()
 
-
-
-
 datasets = ['kor_multi_modal']
 for dataset_name in datasets:
     print('Training dataset:', dataset_name)
 
     # callbacks
+    os.makedirs(base_path, exist_ok=True)
     log_file_path = base_path + dataset_name + '_emotion_training.log'
     csv_logger = CSVLogger(log_file_path, append=False)
     early_stop = EarlyStopping('val_loss', patience=patience)
