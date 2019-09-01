@@ -307,11 +307,11 @@ def mini_XCEPTION_with_attention(input_shape, num_classes, l2_regularization=0.0
     # attention
     img_input = Input(input_shape)
     attention_probs = Dense(48*48, activation='softmax', name='attention_vec')(img_input)
-    img_input = multiply([img_input, attention_probs], name='attention_mul')
+    attention_mul = multiply([img_input, attention_probs], name='attention_mul')
 
     # base
     x = Conv2D(8, (3, 3), strides=(1, 1), kernel_regularizer=regularization,
-               use_bias=False)(img_input)
+               use_bias=False)(attention_mul)
     x = BatchNormalization()(x)
     x = Activation('relu')(x)
     x = Conv2D(8, (3, 3), strides=(1, 1), kernel_regularizer=regularization,

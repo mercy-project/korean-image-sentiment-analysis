@@ -12,7 +12,8 @@ from tensorflow.keras.callbacks import ReduceLROnPlateau
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import tensorflow.keras as keras
 
-from models.cnn import mini_XCEPTION
+#from models.cnn import mini_XCEPTION
+from models.cnn import mini_XCEPTION_with_attention
 from utils.datasets import DataManager
 from utils.datasets import split_data
 from utils.preprocessor import preprocess_input
@@ -46,7 +47,7 @@ data_generator = ImageDataGenerator(
                         horizontal_flip=True)
 
 # model parameters/compilation
-model = mini_XCEPTION(input_shape, num_classes)
+model = mini_XCEPTION_with_attention(input_shape, num_classes)
 # model = tf.keras.utils.multi_gpu_model(model, gpus=NUM_GPU)
 model.compile(optimizer='adam', loss='categorical_crossentropy',
               metrics=['accuracy'])
