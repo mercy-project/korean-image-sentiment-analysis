@@ -1,8 +1,6 @@
 # korean-image-sentiment-analysis
 This project is a part of the [mercy-project](https://github.com/mercy-project).
 
-#### -- Project Status: [Active, On-Hold, Completed]
-
 ## Project Intro/Objective
 이 프로젝트의 목적은 딥러닝 컴퓨터 비전 기술을 이용해서 사진에서 사람의 감정을 추출하는 것입니다.
 
