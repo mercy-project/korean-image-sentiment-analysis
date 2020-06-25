@@ -1,4 +1,4 @@
-# # korean-image-sentiment-analysis
+# korean-image-sentiment-analysis
 This project is a part of the [mercy-project](https://github.com/mercy-project).
 
 #### -- Project Status: [Active, On-Hold, Completed]
