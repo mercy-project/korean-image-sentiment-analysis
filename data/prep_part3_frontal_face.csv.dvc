@@ -1,0 +1,8 @@
+wdir: ..
+md5: 000d468119f27bc569e423455181ae2a
+outs:
+- cache: true
+  metric: false
+  md5: 8d3c37702a5daea0ac49e26b418e819a
+  path: datasets/prep_part3_frontal_face.csv
+  persist: false

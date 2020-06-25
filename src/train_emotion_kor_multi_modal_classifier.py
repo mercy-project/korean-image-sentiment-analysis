@@ -1,7 +1,7 @@
 # referenced from https://github.com/oarriaga/face_classification
 
 import os
-os.environ['CUDA_VISIBLE_DEVICES']='0,1,2,3,6,7'
+os.environ['CUDA_VISIBLE_DEVICES']='1,2,3,6,7'
 
 
 from datetime import datetime
