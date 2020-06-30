@@ -1,9 +1,9 @@
 ---
 name: SOS-Masters
 about: Issues for samsung open source masters (sos-masters)
-title: ''
-labels: ''
-assignees: ''
+title: "[SOS-Masters] Default issue"
+labels: sos-masters
+assignees: howtowhy, skfo763
 
 ---
 
