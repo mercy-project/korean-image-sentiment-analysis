@@ -83,10 +83,3 @@ ray # for preprocessing
 $ python src/train_emotion_kor_multi_modal_classifier.py
 ```
 5. Inference
-
-
-## Contributing Members
-|Name     |  Slack Handle   | 
-|---------|-----------------|
-|[Full Name](https://github.com/[github handle])| @johnDoe        |
-|[Full Name](https://github.com/[github handle]) |     @janeDoe    |
