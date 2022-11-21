@@ -5,4 +5,4 @@ opencv-python==4.1.0.25
 statistics==1.0.3.5
 h5py==2.9.0
 numpy==1.16.4
-tensorflow-gpu==2.0.0b1
+tensorflow-gpu==2.9.3
